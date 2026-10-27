@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Akash's developer portfolio">
+  <title>Akash | Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <a href="#" class="logo">Akash<span>.</span></a>
+    <span class="badge" id="authStatus">Not signed in</span>
+  </header>
+  <main>
+    <section id="loginView" class="auth-card">
+      <p class="eyebrow">WELCOME TO MY SPACE</p>
+      <h1 id="formTitle">Welcome back</h1>
+      <p class="subtitle">Sign in to access my portfolio.</p>
+      <form id="authForm">
+        <label for="email">Email address</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" placeholder="At least 6 characters" autocomplete="current-password" minlength="6" required>
+        <button id="submitBtn" class="primary-btn" type="submit">Login</button>
+      </form>
+      <button id="forgotBtn" class="text-btn" type="button">Forgot password?</button>
+      <div class="divider"><span>OR CONTINUE WITH</span></div>
+      <div class="social-buttons">
+        <button id="googleBtn" class="secondary-btn" type="button"><span class="provider-icon google-icon">G</span> Google</button>
+        <button id="githubBtn" class="secondary-btn" type="button"><span class="provider-icon github-icon">⌘</span> GitHub</button>
+      </div>
+      <p class="switch-text"><span id="switchLabel">Don't have an account?</span> <button id="modeToggle" class="inline-btn" type="button">Sign up</button></p>
+      <p id="message" class="message" role="status" aria-live="polite"></p>
+    </section>
+
+    <section id="portfolioView" class="portfolio hidden">
+      <div class="hero">
+        <p class="eyebrow">SOFTWARE DEVELOPER</p>
+        <h1>Hi, I'm <span>Akash.</span></h1>
+        <p class="subtitle">I build useful digital experiences and solve problems with code.</p>
+        <a class="primary-btn project-link" href="#projects">Explore my work</a>
+      </div>
+      <section class="content-section">
+        <p class="eyebrow">A LITTLE ABOUT ME</p><h2>About Me</h2>
+        <p>I'm a developer passionate about web development, problem-solving, and learning new technologies.</p>
+      </section>
+      <section id="projects" class="content-section">
+        <p class="eyebrow">SELECTED WORK</p><h2>Featured Projects</h2>
+        <div class="project-grid">
+          <article class="project-card"><span class="project-number">01</span><h3>Portfolio Website</h3><p>A personal website built with HTML, CSS, JavaScript and Supabase authentication.</p><span class="tag">HTML · CSS · JS</span></article>
+          <article class="project-card"><span class="project-number">02</span><h3>Web Application</h3><p>A place to showcase an application, its features, and the problem it solves.</p><span class="tag">Web Development</span></article>
+          <article class="project-card"><span class="project-number">03</span><h3>Problem Solving</h3><p>Programming and algorithm projects demonstrating practical problem-solving skills.</p><span class="tag">Java · DSA</span></article>
+        </div>
+      </section>
+      <section class="content-section contact-card">
+        <p class="eyebrow">GET IN TOUCH</p><h2>Let's build something.</h2>
+        <p>Interested in collaborating? Update this section with your contact details.</p>
+      </section>
+      <div class="account-row"><p>Signed in as <strong id="userEmail"></strong></p><button id="logoutBtn" class="secondary-btn" type="button">Sign out</button></div>
+    </section>
+  </main>
+  <footer><p>© <span id="year"></span> Akash. Built with care.</p></footer>
+</body>
+</html>
